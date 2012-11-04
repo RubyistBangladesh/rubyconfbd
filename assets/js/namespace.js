@@ -1,0 +1,1 @@
+var App = App || { $Main: $("#main-container"), Admin: false, setAdmin: function(admin){this.Admin = admin;}};
