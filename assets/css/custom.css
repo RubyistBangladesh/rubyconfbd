@@ -11,3 +11,6 @@
 .green{
     color: #006400;
 }
+ul.list-none li{
+    list-style-type: none;
+}

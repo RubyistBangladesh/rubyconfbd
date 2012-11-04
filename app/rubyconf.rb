@@ -21,7 +21,7 @@ class Rubyconf < Sinatra::Base
   settings.assets.append_path "assets/js/views"
   settings.assets.append_path "assets/js/routers"
   settings.assets.append_path "assets/js/libs"
-
+  settings.assets.append_path "assets/img"
   settings.assets.append_path "assets/css"
 
   # For compressed JS and CSS output
@@ -41,6 +41,16 @@ class Rubyconf < Sinatra::Base
   get "/css/:file.css" do
     content_type "text/css"
     settings.assets["#{params[:file]}.css"]
+  end
+
+  get "/images/:file.png" do
+    content_type "text/image"
+    settings.assets["#{params[:file]}.png"]
+  end
+
+  get "/images/:file.jpg" do
+    content_type "text/image"
+    settings.assets["#{params[:file]}.jpg"]
   end
 
 end
