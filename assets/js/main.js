@@ -1,3 +1,10 @@
-head.js({
-
-});
+head.js(
+    "/js/namespace.js"
+    ,"/js/proposal_view.js"
+    ,"/js/about_view.js"
+    ,"/js/topic_view.js"
+    ,"/js/sponsor_view.js"
+    ,"/js/index_view.js"
+    ,"/js/router.js"
+    ,"/js/app.js"
+);

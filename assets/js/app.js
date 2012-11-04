@@ -1,13 +1,13 @@
 $(function() {
 
 // Kick things off by creating the **App**.
-    this.Router = new App.AlleyRouter;
+    this.Router = new App.RubyConfRouter;
     var that = this;
     App.goTo = function (loc) {
         that.Router.navigate(loc, true);
     };
 
-    App.goReturn = function () {
+    App.goBack = function () {
         history.back(-1);
     };
 
