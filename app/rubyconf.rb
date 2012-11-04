@@ -1,4 +1,3 @@
-require "sinatra/reloader"
 require "yaml"
 require "sprockets"
 require "haml"
@@ -8,7 +7,7 @@ class Rubyconf < Sinatra::Base
   set :app_path, '/'
 
   configure :development do
-    register Sinatra::Reloader
+
   end
 
   set :logging, true
@@ -17,6 +16,12 @@ class Rubyconf < Sinatra::Base
 
   # Configure sprockets
   settings.assets.append_path "assets/js"
+  settings.assets.append_path "assets/js/collections"
+  settings.assets.append_path "assets/js/models"
+  settings.assets.append_path "assets/js/views"
+  settings.assets.append_path "assets/js/routers"
+  settings.assets.append_path "assets/js/libs"
+
   settings.assets.append_path "assets/css"
 
   # For compressed JS and CSS output
