@@ -10,7 +10,7 @@ old_pid = pid_file + '.oldbin'
 timeout 30
 worker_processes 2 # increase or decrease
 listen socket_file, :backlog => 1024
-listen 8882, :tcp_nopush => true
+listen 8883, :tcp_nopush => true
 
 pid pid_file
 stderr_path err_log
