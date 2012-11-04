@@ -16,5 +16,4 @@ test/version_tmp
 tmp
 .idea/
 config/deploy.rb
-config/unicorn.rb
 Capfile
