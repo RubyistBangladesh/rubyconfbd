@@ -6,6 +6,7 @@
     %meta(name='description' content='')
     %meta(name='author' content='')
     %script{:src=> "/js/head.min.js"}
+    %script{:src=> "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"}
     %link(href='/css/bootstrap.min.css' rel='stylesheet')
     %link(href='/css/custom.css' rel='stylesheet')
     //%style
@@ -36,7 +37,6 @@
 
     %script
       head.js(
-      "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js",
       "/js/bootstrap.min.js",
       "/js/underscore.min.js", "/js/backbone.min.js"
       //"/js/bootstrap-alert.js", "/js/bootstrap-dropdown.js",
@@ -51,6 +51,7 @@
     = haml :index
     = haml :about
     = haml :proposal
+    = haml :register
     = haml :sponsor
     = haml :topic
 
