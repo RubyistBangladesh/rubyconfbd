@@ -43,14 +43,11 @@ class Rubyconf < Sinatra::Base
     settings.assets["#{params[:file]}.css"]
   end
 
-  get "/images/:file.png" do
+  get "/images/:file" do
+    file = params[:file].split(".")
     content_type "text/image"
-    settings.assets["#{params[:file]}.png"]
+    settings.assets["#{file[0]}.#{file[1]}"]
   end
 
-  get "/images/:file.jpg" do
-    content_type "text/image"
-    settings.assets["#{params[:file]}.jpg"]
-  end
 
 end
