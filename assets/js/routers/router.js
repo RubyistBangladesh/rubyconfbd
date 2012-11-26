@@ -3,6 +3,7 @@ App.RubyConfRouter = Backbone.Router.extend({
         "": "index",
         "sponsor": "sponsor",
         "topic": "topic",
+        "speaker": "speaker",
         "about": "about",
         "proposal": "proposal",
         "register": "register"
@@ -19,8 +20,8 @@ App.RubyConfRouter = Backbone.Router.extend({
         var view = new App.SponsorView;
         view.render();
     },
-    topic: function(actions){
-        var view = new App.TopicView;
+    speaker: function(actions){
+        var view = new App.SpeakerView;
         view.render();
     },
     about: function(actions){
