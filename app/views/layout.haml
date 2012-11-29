@@ -27,7 +27,15 @@
     .container-fluid
       .row-fluid
         .span2
+          %div &nbsp;
           %img{:src=> "/images/ruby_logo.png"}
+          %div &nbsp;
+          %div{:style => 'float:right; padding-right:50px;'}
+            Sponsored by
+            %br
+            %br
+            %a{:href => "http://www.rubycentral.org"}
+              %span.label.label-success{:style => 'font-size: 18px;'} Ruby Central Inc.
         .span8
           %div.blackops_one{:align=>'center'}
             %span.red RubyConf
