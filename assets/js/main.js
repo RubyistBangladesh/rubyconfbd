@@ -6,6 +6,7 @@ head.js(
     ,"/js/topic_view.js"
     ,"/js/speaker_view.js"
     ,"/js/sponsor_view.js"
+    ,"/js/schedule_view.js"
     ,"/js/index_view.js"
     ,"/js/router.js"
     ,"/js/app.js"
