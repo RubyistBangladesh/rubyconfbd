@@ -1,16 +1,18 @@
 !!!
 %html
   %head
-    %title Project: rubyconf
+    %title Rubyists Bangladesh | active ruby community in Bangladesh
     %meta(name='viewport' content='width=device-width, initial-scale=1.0')
     %meta(name='description' content='')
     %meta(name='author' content='')
     %script{:src=> "/js/head.min.js"}
-    %link(href='/css/bootstrap.css' rel='stylesheet')
-    %style
-      body {padding-top: 60px;} /* 60px to make the container go all the way to the bottom of the topbar */
+    %script{:src=> "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"}
+    %link(href='/css/bootstrap.min.css' rel='stylesheet')
+    %link(href='/css/custom.css' rel='stylesheet')
+    //%style
+    //  body {padding-top: 60px;} /* 60px to make the container go all the way to the bottom of the topbar */
     %link(href='/css/bootstrap-responsive.css' rel='stylesheet')
-
+    %link(href='http://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css')
     //Le HTML5 shim, for IE6-8 support of HTML5 elements
     //if lt IE 9
     %script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
@@ -21,16 +23,56 @@
     %link(rel='apple-touch-icon-precomposed' href='/assets/ico/apple-touch-icon-57-precomposed.png')
 
   %body
-    = haml :'includes/navbar'
-    .container
-      =yield
+
+    .container-fluid
+      .row-fluid
+        .span2
+          %div &nbsp;
+          %img{:src=> "/images/ruby_logo.png"}
+          %div &nbsp;
+          %div{:style => 'float:right; padding-right:50px;'}
+            Sponsored by
+            %br
+            %br
+            %a{:href => "http://www.rubycentral.org"}
+              %span.label.label-success{:style => 'font-size: 18px;'} Ruby Central Inc.
+        .span8
+          %div.blackops_one{:align=>'center'}
+            %span.red RubyConf
+            %span.green Bangladesh
+          = haml :'includes/navbar'
+          #main-container
+        .span2
+
     %script
       head.js(
-      "/js/underscore.min.js", "/js/backbone.min.js",
-      "/js/bootstrap-alert.js", "/js/bootstrap-dropdown.js",
-      "/js/bootstrap-modal.js","/js/bootstrap-tooltip.js"
+      "/js/bootstrap.min.js",
+      "/js/underscore.min.js", "/js/backbone.min.js"
+      //"/js/bootstrap-alert.js", "/js/bootstrap-dropdown.js",
+      //"/js/bootstrap-datepicker.js", "/js/bootstrap-timepicker.js"
+      //"/js/bootstrap-modal.js","/js/bootstrap-tooltip.js",
       //"/js/bootstrap-button.js","/js/bootstrap-collapse.js","/js/bootstrap-carousel.js",
       //"/js/bootstrap-popover.js","/js/bootstrap-scrollspy.js","/js/bootstrap-tab.js",
       //"/js/bootstrap-transition.js","/js/bootstrap-typeahead.js"
-      )
+      ,"/js/main.js"
 
+      )
+    = haml :index
+    = haml :about
+    = haml :proposal
+    = haml :register
+    = haml :sponsor
+    = haml :topic
+    = haml :speaker
+    = haml :schedule
+
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36068082-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();

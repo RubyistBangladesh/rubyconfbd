@@ -1,5 +1,5 @@
 # define paths and filenames
-deploy_to = "/var/www/rubyconf"
+deploy_to = "/home/apache/web/rubyapps/rubyconfbd"
 sin_root = "#{deploy_to}/current"
 pid_file = "#{deploy_to}/shared/pids/unicorn.pid"
 socket_file= "#{deploy_to}/shared/unicorn.sock"
@@ -10,6 +10,7 @@ old_pid = pid_file + '.oldbin'
 timeout 30
 worker_processes 2 # increase or decrease
 listen socket_file, :backlog => 1024
+listen 8883, :tcp_nopush => true
 
 pid pid_file
 stderr_path err_log

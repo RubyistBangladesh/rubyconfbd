@@ -1,6 +1,6 @@
-App.AboutView = Backbone.View.extend({
+App.RegisterView = Backbone.View.extend({
 
-    template: _.template($('#about-template').html()),
+    template: _.template($('#register-template').html()),
     // Delegated events for creating new items, and clearing completed ones.
     events: {
 
@@ -8,7 +8,7 @@ App.AboutView = Backbone.View.extend({
     // At initialization
     initialize: function() {
         $("ul.nav > li").removeClass('active');
-        $("ul.nav > li#about").addClass('active');
+        $("ul.nav > li#register").addClass('active');
     },
 
     render: function() {
