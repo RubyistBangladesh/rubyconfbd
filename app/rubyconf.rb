@@ -25,9 +25,9 @@ class Rubyconf < Sinatra::Base
   settings.assets.append_path "assets/css"
 
   # For compressed JS and CSS output
-  require "yui/compressor"
-  settings.assets.js_compressor  = YUI::JavaScriptCompressor.new
-  settings.assets.css_compressor = YUI::CssCompressor.new
+  #require "yui/compressor"
+  #settings.assets.js_compressor  = YUI::JavaScriptCompressor.new
+  #settings.assets.css_compressor = YUI::CssCompressor.new
 
   get "/" do
     haml :index
