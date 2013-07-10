@@ -6,7 +6,7 @@
     %meta(name='description' content='')
     %meta(name='author' content='')
     %script{:src=> "/js/head.min.js"}
-    %script{:src=> "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"}
+    /%script{:src=> "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"}
     %link(href='/css/bootstrap.min.css' rel='stylesheet')
     %link(href='/css/custom.css' rel='stylesheet')
     //%style
@@ -37,7 +37,7 @@
             %a{:href => "http://www.rubycentral.org"}
               %span.label.label-success{:style => 'font-size: 18px;'} Ruby Central Inc.
         .span8
-          %div.blackops_one{:align=>'center'}
+          .blackops_one{:align=>'center'}
             %span.red RubyConf
             %span.green Bangladesh
           = haml :'includes/navbar'
